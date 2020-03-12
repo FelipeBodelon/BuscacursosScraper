@@ -1,5 +1,5 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler
-
+from APIkey import token
 
 # Función para enviar un mensaje a telegram
 def broadcast_message(updater, mensaje):
@@ -8,7 +8,7 @@ def broadcast_message(updater, mensaje):
 
 # Inicializa el bot:
 def main():
-    updater = Updater(token='828466731:AAGhMQ_C7MYULh1TgWKL6Q9WF_nrO7rN51c', use_context=True)
+    updater = Updater(token=token, use_context=True)
     dispatcher = updater.dispatcher
     updater.start_polling()
     return updater
